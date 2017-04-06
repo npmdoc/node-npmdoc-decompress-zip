@@ -1,0 +1,531 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/bower/decompress-zip#readme"
+
+    >decompress-zip (v0.3.0)</a>
+</h1>
+<h4>Extract files from a ZIP archive</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.decompress-zip">module decompress-zip</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.super_">
+            function <span class="apidocSignatureSpan">decompress-zip.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">decompress-zip.</span>extractors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">decompress-zip.</span>structures</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.decompress-zip.extractors">module decompress-zip.extractors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.extractors.copy">
+            function <span class="apidocSignatureSpan">decompress-zip.extractors.</span>copy
+            <span class="apidocSignatureSpan">(file, destination, zip, basePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.extractors.deflate">
+            function <span class="apidocSignatureSpan">decompress-zip.extractors.</span>deflate
+            <span class="apidocSignatureSpan">(file, destination, zip)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.extractors.folder">
+            function <span class="apidocSignatureSpan">decompress-zip.extractors.</span>folder
+            <span class="apidocSignatureSpan">(folder, destination, zip)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.extractors.store">
+            function <span class="apidocSignatureSpan">decompress-zip.extractors.</span>store
+            <span class="apidocSignatureSpan">(file, destination, zip)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.extractors.symlink">
+            function <span class="apidocSignatureSpan">decompress-zip.extractors.</span>symlink
+            <span class="apidocSignatureSpan">(file, destination, zip, basePath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.decompress-zip.structures">module decompress-zip.structures</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.structures.readDirectory">
+            function <span class="apidocSignatureSpan">decompress-zip.structures.</span>readDirectory
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.structures.readEndRecord">
+            function <span class="apidocSignatureSpan">decompress-zip.structures.</span>readEndRecord
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.structures.readFileEntry">
+            function <span class="apidocSignatureSpan">decompress-zip.structures.</span>readFileEntry
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">decompress-zip.structures.</span>maxFileEntrySize</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.decompress-zip" id="apidoc.module.decompress-zip">module decompress-zip</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.decompress-zip.super_" id="apidoc.element.decompress-zip.super_">
+        function <span class="apidocSignatureSpan">decompress-zip.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.decompress-zip.extractors" id="apidoc.module.decompress-zip.extractors">module decompress-zip.extractors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.decompress-zip.extractors.copy" id="apidoc.element.decompress-zip.extractors.copy">
+        function <span class="apidocSignatureSpan">decompress-zip.extractors.</span>copy
+        <span class="apidocSignatureSpan">(file, destination, zip, basePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">copy = function (file, destination, zip, basePath) {
+    var type;
+    var parent = path.dirname(destination);
+
+    return mkdir(parent, zip.dirCache)
+    .then(function () {
+        return getLinkLocation(file, destination, zip, basePath);
+    })
+    .then(function (linkTo) {
+        return stat(path.resolve(parent, linkTo))
+        .then(function (stats) {
+            if (stats.isFile()) {
+                type = &#x27;File&#x27;;
+                var input = new stream.Readable();
+                input.wrap(fs.createReadStream(path.resolve(parent, linkTo)));
+                return pipePromise(input, destination);
+            } else if (stats.isDirectory()) {
+                type = &#x27;Directory&#x27;;
+                return mkdir(destination, zip.dirCache);
+            } else {
+                throw new Error(&#x27;Could not follow symlink to unknown file type&#x27;);
+            }
+        })
+        .then(function () {
+            return {copy: file.path, original: linkTo, type: type};
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.decompress-zip.extractors.deflate" id="apidoc.element.decompress-zip.extractors.deflate">
+        function <span class="apidocSignatureSpan">decompress-zip.extractors.</span>deflate
+        <span class="apidocSignatureSpan">(file, destination, zip)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deflate = function (file, destination, zip) {
+    // For Deflate you don&#x27;t actually need to specify the end offset - and
+    // in fact many ZIP files don&#x27;t include compressed file sizes for
+    // Deflated files so we don&#x27;t even know what the end offset is.
+
+    return mkdir(path.dirname(destination), zip.dirCache)
+    .then(function () {
+        if (file._maxSize &#x3c;= zip.chunkSize) {
+            return zip.getBuffer(file._offset, file._offset + file._maxSize)
+            .then(inflateRaw)
+            .then(function (buffer) {
+                return writeFile(destination, buffer, { mode: file.mode });
+            });
+        } else {
+            // For node 0.8 we need to create the Zlib stream and attach
+            // handlers in the same tick of the event loop, which is why we do
+            // the creation in here
+            var input = new stream.Readable();
+            input.wrap(fs.createReadStream(zip.filename, {start: file._offset}));
+            var inflater = input.pipe(zlib.createInflateRaw({highWaterMark: 32 * 1024}));
+
+            return pipePromise(inflater, destination, { mode: file.mode });
+        }
+    })
+    .then(function () {
+        return {deflated: file.path};
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.decompress-zip.extractors.folder" id="apidoc.element.decompress-zip.extractors.folder">
+        function <span class="apidocSignatureSpan">decompress-zip.extractors.</span>folder
+        <span class="apidocSignatureSpan">(folder, destination, zip)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">folder = function (folder, destination, zip) {
+    return mkdir(destination, zip.dirCache, folder.mode)
+    .then(function () {
+        return {folder: folder.path};
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.decompress-zip.extractors.store" id="apidoc.element.decompress-zip.extractors.store">
+        function <span class="apidocSignatureSpan">decompress-zip.extractors.</span>store
+        <span class="apidocSignatureSpan">(file, destination, zip)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">store = function (file, destination, zip) {
+    var writer;
+
+    if (file.uncompressedSize === 0) {
+        writer = touch.bind(null, destination);
+    } else if (file.uncompressedSize &#x3c;= zip.chunkSize) {
+        writer = function () {
+            return zip.getBuffer(file._offset, file._offset + file.uncompressedSize)
+            .then(function (buffer) {
+                return writeFile(destination, buffer, { mode: file.mode });
+            });
+        };
+    } else {
+        var input = new stream.Readable();
+        input.wrap(fs.createReadStream(zip.filename, {start: file._offset, end: file._offset + file.uncompressedSize - 1}));
+        writer = pipePromise.bind(null, input, destination, { mode: file.mode });
+    }
+
+    return mkdir(path.dirname(destination), zip.dirCache)
+    .then(writer)
+    .then(function () {
+        return {stored: file.path};
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.decompress-zip.extractors.symlink" id="apidoc.element.decompress-zip.extractors.symlink">
+        function <span class="apidocSignatureSpan">decompress-zip.extractors.</span>symlink
+        <span class="apidocSignatureSpan">(file, destination, zip, basePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">symlink = function (file, destination, zip, basePath) {
+    var parent = path.dirname(destination);
+    return mkdir(parent, zip.dirCache)
+    .then(function () {
+        return getLinkLocation(file, destination, zip, basePath);
+    })
+    .then(function (linkTo) {
+        return symlink(path.resolve(parent, linkTo), destination)
+        .then(function () {
+            return {symlink: file.path, linkTo: linkTo};
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.decompress-zip.structures" id="apidoc.module.decompress-zip.structures">module decompress-zip.structures</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.decompress-zip.structures.readDirectory" id="apidoc.element.decompress-zip.structures.readDirectory">
+        function <span class="apidocSignatureSpan">decompress-zip.structures.</span>readDirectory
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readDirectory = function (buffer) {
+    var directory = [];
+    var current;
+    var index = 0;
+
+    while (index &#x3c; buffer.length) {
+        current = binary.parse(buffer.slice(index, index + 46))
+        .word32lu(&#x27;signature&#x27;)
+        .word8lu(&#x27;creatorSpecVersion&#x27;)
+        .word8lu(&#x27;creatorPlatform&#x27;)
+        .word8lu(&#x27;requiredSpecVersion&#x27;)
+        .word8lu(&#x27;requiredPlatform&#x27;)
+        .word16lu(&#x27;generalPurposeBitFlag&#x27;)
+        .word16lu(&#x27;compressionMethod&#x27;)
+        .word16lu(&#x27;lastModFileTime&#x27;)
+        .word16lu(&#x27;lastModFileDate&#x27;)
+        .word32lu(&#x27;crc32&#x27;)
+        .word32lu(&#x27;compressedSize&#x27;)
+        .word32lu(&#x27;uncompressedSize&#x27;)
+        .word16lu(&#x27;fileNameLength&#x27;)
+        .word16lu(&#x27;extraFieldLength&#x27;)
+        .word16lu(&#x27;fileCommentLength&#x27;)
+        .word16lu(&#x27;diskNumberStart&#x27;)
+        .word16lu(&#x27;internalFileAttributes&#x27;)
+        .word32lu(&#x27;externalFileAttributes&#x27;)
+        .word32lu(&#x27;relativeOffsetOfLocalHeader&#x27;)
+        .vars;
+
+        index += 46;
+
+        current.generalPurposeFlags = convertGeneralPurposeFlags(current.generalPurposeBitFlag);
+        current.fileAttributes = parseExternalFileAttributes(current.externalFileAttributes, current.creatorPlatform);
+
+        current.modifiedTime = convertDateTime(current.lastModFileDate, current.lastModFileTime);
+        current.fileName = current.extraField = current.fileComment = &#x27;&#x27;;
+        current.headerLength = 46 + current.fileNameLength + current.extraFieldLength + current.fileCommentLength;
+
+        if (current.fileNameLength &#x3e; 0) {
+            current.fileName = buffer.slice(index, index + current.fileNameLength).toString();
+            index += current.fileNameLength;
+        }
+
+        if (current.extraFieldLength &#x3e; 0) {
+            current.extraField = buffer.slice(index, index + current.extraFieldLength).toString();
+            index += current.extraFieldLength;
+        }
+
+        if (current.fileCommentLength &#x3e; 0) {
+            current.fileComment = buffer.slice(index, index + current.fileCommentLength).toString();
+            index += current.fileCommentLength;
+        }
+
+        if (current.fileAttributes.type !== &#x27;Directory&#x27; &#x26;&#x26; current.fileName.substr(-1) === &#x27;/&#x27;) {
+            // TODO: check that this is a reasonable check
+            current.fileAttributes.type = &#x27;Directory&#x27;;
+        }
+
+        directory.push(current);
+    }
+
+    directory.sort(directorySort);
+
+    return directory;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.decompress-zip.structures.readEndRecord" id="apidoc.element.decompress-zip.structures.readEndRecord">
+        function <span class="apidocSignatureSpan">decompress-zip.structures.</span>readEndRecord
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readEndRecord = function (buffer) {
+    var data = binary.parse(buffer)
+    .word32lu(&#x27;signature&#x27;)
+    .word16lu(&#x27;diskNumber&#x27;)
+    .word16lu(&#x27;directoryStartDisk&#x27;)
+    .word16lu(&#x27;directoryEntryCountDisk&#x27;)
+    .word16lu(&#x27;directoryEntryCount&#x27;)
+    .word32lu(&#x27;directorySize&#x27;)
+    .word32lu(&#x27;directoryOffset&#x27;)
+    .word16lu(&#x27;commentLength&#x27;)
+    .buffer(&#x27;comment&#x27;, &#x27;commentLength&#x27;)
+    .vars;
+
+    data.comment = data.comment.toString();
+
+    return data;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.decompress-zip.structures.readFileEntry" id="apidoc.element.decompress-zip.structures.readFileEntry">
+        function <span class="apidocSignatureSpan">decompress-zip.structures.</span>readFileEntry
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readFileEntry = function (buffer) {
+    var index = 0;
+
+    var fileEntry = binary.parse(buffer.slice(index, 30))
+    .word32lu(&#x27;signature&#x27;)
+    .word16lu(&#x27;versionNeededToExtract&#x27;)
+    .word16lu(&#x27;generalPurposeBitFlag&#x27;)
+    .word16lu(&#x27;compressionMethod&#x27;)
+    .word16lu(&#x27;lastModFileTime&#x27;)
+    .word16lu(&#x27;lastModFileDate&#x27;)
+    .word32lu(&#x27;crc32&#x27;)
+    .word32lu(&#x27;compressedSize&#x27;)
+    .word32lu(&#x27;uncompressedSize&#x27;)
+    .word16lu(&#x27;fileNameLength&#x27;)
+    .word16lu(&#x27;extraFieldLength&#x27;)
+    .vars;
+
+    index += 30;
+
+    fileEntry.fileName = fileEntry.extraField = &#x27;&#x27;;
+
+    fileEntry.entryLength = 30 + fileEntry.fileNameLength + fileEntry.extraFieldLength;
+
+    if (fileEntry.entryLength &#x3e; structures.maxFileEntrySize) {
+        throw new Error(&#x27;File entry unexpectedly large: &#x27; + fileEntry.entryLength + &#x27; (max: &#x27; + structures.maxFileEntrySize + &#x27;)&#x27;);
+    }
+
+    if (fileEntry.fileNameLength &#x3e; 0) {
+        fileEntry.fileName = buffer.slice(index, index + fileEntry.fileNameLength).toString();
+        index += fileEntry.fileNameLength;
+    }
+
+    if (fileEntry.extraFieldLength &#x3e; 0) {
+        fileEntry.extraField = buffer.slice(index, index + fileEntry.extraFieldLength).toString();
+        index += fileEntry.extraFieldLength;
+    }
+
+    return fileEntry;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
