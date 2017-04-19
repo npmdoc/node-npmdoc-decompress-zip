@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.decompress-zip">
+            function <span class="apidocSignatureSpan"></span>decompress-zip
+            <span class="apidocSignatureSpan">(filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.decompress-zip.super_">
             function <span class="apidocSignatureSpan">decompress-zip.</span>super_
             <span class="apidocSignatureSpan">()</span>
@@ -167,6 +176,32 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.decompress-zip" id="apidoc.module.decompress-zip">module decompress-zip</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.decompress-zip.decompress-zip" id="apidoc.element.decompress-zip.decompress-zip">
+        function <span class="apidocSignatureSpan"></span>decompress-zip
+        <span class="apidocSignatureSpan">(filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DecompressZip(filename) {
+    events.EventEmitter.call(this);
+
+    this.filename = filename;
+    this.stats = null;
+    this.fd = null;
+    this.chunkSize = 1024 * 1024; // Buffer up to 1Mb at a time
+    this.dirCache = {};
+
+    // When we need a resource, we should check if there is a promise for it
+    // already and use that. If the promise is already fulfilled we don't do the
+    // async work again and we get to queue up dependant tasks.
+    this._p = {}; // _p instead of _promises because it is a lot easier to read
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
